@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../Components/Header/Header';
-//import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 function LoginSection() {
     return (
     <div className="section">
@@ -52,7 +52,7 @@ function LoginForm() {
                     <p> <input type="password" name="password"  placeholder="Password" /> </p>
                     <p> <input type="text" name="captcha" placeholder="Captcha" /> </p>
                     <p className="ffum16"><input type="checkbox" /> Remember me <span className="pull-right acolor ffum16">Forgot Password?</span></p>
-                    <p className="text-right"> <input type="submit" value="Login" className="loginBut"/> </p>
+                    <p className="text-right"> <Link to="/mapview"><input type="submit" value="Login" className="loginBut"/></Link> </p>
             </form>
             <p className="text-center ffu14">By Logging in you agree to our <a href="#/" className="acolor">Terms &amp; Conditions</a></p>
                 </div>
