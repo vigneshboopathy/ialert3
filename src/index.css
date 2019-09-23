@@ -19,6 +19,15 @@ img {
 a {
   color: inherit;
 }
+
+.acolor {
+  color:#427ae6;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .container-wrapper {
     max-width: 100%;
     margin: 0 auto;

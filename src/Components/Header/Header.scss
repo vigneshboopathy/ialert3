@@ -7,6 +7,15 @@
     }
 }
 
+ul.menuList.loginFalse {
+    li {
+        a {
+        }
+    }
+
+    
+}
+
 ul.menuList{
     margin-top: 30px;
     margin-left: 0px;
@@ -25,6 +34,7 @@ ul.menuList{
         color: #74787b;
         letter-spacing: 0.7px;
     }
+
     li:first-child {
         color: #517bcd;
         /* text-decoration: underline; */
@@ -32,7 +42,7 @@ ul.menuList{
     li:first-child a{
         position: relative;
     }
-    li:first-child a:after {
+    li:first-child a.active:after {
         content: '';
         position: absolute;
         left: 0px;

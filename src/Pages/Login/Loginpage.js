@@ -2,8 +2,11 @@ import React from 'react';
 //import Header1 from './Components/';
 //import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import LoginSection from '../Login/LoginSection'
+import LoginSection, { LoginForm } from '../Login/LoginSection';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+
 import './Loginpage.scss';
+
 
 class Loginpage extends React.Component {
     constructor(props) {
@@ -18,7 +21,10 @@ class Loginpage extends React.Component {
                 <div className="container-wrapper">
                     
                     <div className="loginSection">
-                        <LoginSection />
+                    <Router>
+                        <Route exact path="/" component={ LoginSection }/>
+                        <Route path="/login" component={ LoginForm } />
+                    </Router>
                     </div>
                     
                     <div className="seperatorSection"></div>
