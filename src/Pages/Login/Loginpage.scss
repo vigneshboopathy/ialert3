@@ -1,22 +1,131 @@
 body {
-    background: #FFF url("/public/images/login/backGround.png") no-repeat fixed center;
-    background-size: 100%;   
+    background: #f8f8f8 url(/images/login/backGround.png) no-repeat top left;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-#header-section.logoScreen {
-    .logo {
+.seperatorSection {
+    margin-top: 70px;
+    height: 70px;
+}
 
+.smallSeprator {
+    margin-top: 30px;
+}
+
+.ffum20 {
+    font-family: 'Ubuntu-Medium';
+    font-size: 20px;
+}
+
+.ffu18 {
+    font-family: 'Ubuntu';
+    font-size: 18px;
+}
+
+.ffub18 {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ffum18 {
+    font-family: 'Ubuntu-Medium';
+    font-size:18px;
+}
+
+.c457be8 {
+    color: #457be8;
+}
+
+.c565e61 {
+    color: #565e61;
+}
+
+.c417ae5 {
+    color: #417ae5;
+}
+
+.c6e6e6e {
+    color: #6e6e6e;
+}
+
+/* Industry Section Start */
+.sectionVal {
+    width: 90%;
+    line-height: 25px;
+
+    h3 {
+        font-size: 32px;
+        color: rgba(38,50,56,0.949);
+    }
+    .mTop15 {
+        margin-top: 30px;
+    }
+
+    .inputCont {
+        margin-top: 40px;
+        
+        .inputBlock input {
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border: 0px;
+            padding: 12px 20px;
+            font-size: 20px;
+            color: rgba(35, 31, 32, 0.349);
+            box-shadow: 3px 1px 15px #ccc;
+        }
+    }
+
+
+    .commonbut {
+        background: #f9b836;
+        padding: 15px 41px;
+        border-top-right-radius: 25px;
+        letter-spacing: 0.5px;
+        box-shadow: 3px 1px 15px #ccc;
+        border-bottom-right-radius: 25px;
     }
 }
 
-ul.menuList{
-    li {
-        list-style: none;
-        display: inline;
-        padding: 15px;
-        font-size: 17px;
+
+/* Industry Section End */
+
+/* Feature Section Start */
+
+#industry-section {
+    .head-part h5 {
+        font-family: "Ubuntu-Light";
+        font-size: 32px;
+        color: rgba(66, 122, 230, 0.949);
+    } 
+    h3 {
+        font-weight: bold;
+        font-size: 32px;
+        color: rgba(38, 50, 56, 0.949);
     }
-    li:first-child {
-        color: #517bcd;
+
+    
+}
+
+#contact-section {
+
+.contactInfo {
+    p.active span {
+        position: relative;
     }
+    
+    p.active span:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        bottom: -11px;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 5px solid #427be6;
+        clear: both;
+    }
+}
 }
