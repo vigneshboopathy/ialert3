@@ -6,16 +6,17 @@
   "homepage": "https://tim152.github.io/clustering-google-map-react/",
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "google-map-react": "1.0.1",
+    "immutable": "^3.8.1",
     "node-sass": "^4.12.0",
+    "points-cluster": "0.1.4",
+    "prop-types": "15.5.10",
     "react": "^16.9.0",
+    "react-async-component": "^2.0.0",
     "react-dom": "^16.9.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
-    "google-map-react": "1.0.1",
-    "immutable": "^3.8.1",
-    "points-cluster": "0.1.4",
-    "prop-types": "15.5.10",
     "styled-components": "2.1.0"
   },
   "scripts": {

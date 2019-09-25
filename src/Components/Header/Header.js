@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import NavLink from '../../Components/Link/Link'
 import './Header.scss';
 
 function HeaderTrue(menuList) {
@@ -17,9 +17,9 @@ function HeaderTrue(menuList) {
         </div>
         <div className="col-md-4">
         <div className="loginIconImage">
-            <Link to="/login">
+            <NavLink name="Go to Maps page" link="/login" >
                 <img src="images/login/Loginbutton.png" alt="iAlert" title="Login"/ >
-            </Link>
+            </NavLink>
         </div>
         </div>
     </div>
@@ -32,7 +32,7 @@ function HeaderFalse() {
           <div className="col-md-8">
               <nav className="menuItems">
                   <ul className="menuList loginFalse">
-                    <li><Link to="/">Back to Main Menu</Link></li>
+                    <li><NavLink name="Go to Maps page" link="/" >Back to Main Menu</NavLink></li>
                   </ul>
               </nav>
           </div>

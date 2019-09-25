@@ -91,7 +91,7 @@ body {
 
     .commonbut {
         background: #f9b836;
-        padding: 15px 41px;
+        padding: 13px 41px;
         border-top-right-radius: 25px;
         letter-spacing: 0.5px;
         box-shadow: 3px 1px 15px #ccc;
@@ -116,6 +116,7 @@ body {
         box-shadow: none;
         background: #f9b937;
         border: 0px;
+        cursor: pointer;
        } 
         input[type='text'], input[type='password'] {
         margin: 5px;

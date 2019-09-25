@@ -8,7 +8,8 @@ import ClusterMarker from '../ClusterMarker';
 import mapStyles from './mapStyles.json';
 import { Listvalue, susolvkaCoords } from '../../fakeData';
 import vehiclelogo from './truck.png';
-import MapWrapper from './MapWrapper';
+//import MapWrapper from './MapWrapper';
+//import styled from 'styled-components';
 
 const MAP = {
   defaultZoom: 4,
@@ -19,7 +20,24 @@ const MAP = {
   },
 };
 
-export class GoogleMap extends React.PureComponent {
+
+const MapWrapper = {
+  position: 'relative',
+  width: '100%',
+  height: '100%'
+};
+
+/* var dataVals = Listvalue.then((response) => {
+//   console.log(response);
+ });
+*/
+
+class GoogleMap extends React.Component {
+  debugger;
+  constructor(props) {
+    super(props);
+    console.log(this.props);
+  }
   // eslint-disable-line react/prefer-stateless-function
   state = {
     mapOptions: {
@@ -44,31 +62,40 @@ export class GoogleMap extends React.PureComponent {
   
   }
 
-  getClusters = () => {
-    
-    console.log(Listvalue);
-    const clusters = supercluster(Listvalue, {
-     
-      minZoom: 1,
-      maxZoom: 16,
-      radius: 40,
-    });
+  getClusters = (datas, responseVal) => {
 
-    return clusters(this.state.mapOptions);
+    console.log(responseVal);
+    console.log(datas);
+    debugger;
+    //console.log(dataVals);
+    //console.log(Listvalue);
+    //var constValue;
+      const clusters = supercluster(responseVal, {
+        minZoom: 1,
+        maxZoom: 16,
+        radius: 40,
+      });
+      return clusters(this.state.mapOptions);
+    
   };
 
   createClusters = props => {
     //debugger
-    this.setState({
-      clusters: this.state.mapOptions.bounds
-        ? this.getClusters(props).map(({ wx, wy, numPoints, points }) => ({
-            lat: wy,
-            lng: wx,
-            numPoints,
-            points,
-          }))
-        : [],
+    Listvalue.then((response) => {
+      this.setState({
+        clusters: this.state.mapOptions.bounds
+          ? this.getClusters(props, response).map(({ wx, wy, numPoints, points }) => ({
+              lat: wy,
+              lng: wx,
+              numPoints,
+              points,
+            }))
+          : [],
+      });
+    }).catch((err)=>{
+      console.error(err);
     });
+    
   };
 
   handleMapChange = ({ center, zoom, bounds }) => {
@@ -88,18 +115,12 @@ export class GoogleMap extends React.PureComponent {
   };
 
   render() {
-    //debugger;
+//    debugger;
     return (
-      <MapWrapper>
-        <GoogleMapReact
-          defaultZoom={MAP.defaultZoom}
-          defaultCenter={MAP.defaultCenter}
-          options={MAP.options}
-          onChange={this.handleMapChange}
-          bootstrapURLKeys={{ key: 'AIzaSyBFNzhbubIgQTKjyUNZZvaWQJ8qFaHAbmA' }}
-        >
+      <div style={MapWrapper}>
+        <GoogleMapReact defaultZoom={MAP.defaultZoom} defaultCenter={MAP.defaultCenter} options={MAP.options} onChange={this.handleMapChange} bootstrapURLKeys={{ key: 'AIzaSyBFNzhbubIgQTKjyUNZZvaWQJ8qFaHAbmA' }} >
           {this.state.clusters.map(item => {
-            //debugger
+            debugger
             if (item.numPoints === 1) {
               return (
                 <Marker 
@@ -112,18 +133,15 @@ export class GoogleMap extends React.PureComponent {
             }
 
             return (
-              <ClusterMarker
-                key={item.id}
-                lat={item.lat}
-                lng={item.lng}
-                points={item.points}
-              />
+              <ClusterMarker key={item.id} lat={item.lat} lng={item.lng} points={item.points} />
             );
           })}
         </GoogleMapReact>
-      </MapWrapper>
+      </div>
     );
   }
 }
+
+
 
 export default GoogleMap;

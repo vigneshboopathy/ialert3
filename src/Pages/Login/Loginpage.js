@@ -4,10 +4,14 @@ import React from 'react';
 import Footer from '../../Components/Footer/Footer';
 import LoginSection, { LoginForm } from '../Login/LoginSection';
 import { BrowserRouter as Router, Route} from "react-router-dom";
+import NavLink from '../../Components/Link/Link'
 
 import './Loginpage.scss';
-
-
+/*
+const none = {
+    display:'none'
+}
+*/
 class Loginpage extends React.Component {
     constructor(props) {
         super(props);
@@ -17,22 +21,20 @@ class Loginpage extends React.Component {
     render() {
         return (
             <div className="login">
-                
                 <div className="container-wrapper">
-                    
                     <div className="loginSection">
                     <Router>
                         <Route exact path="/" component={ LoginSection }/>
                         <Route path="/login" component={ LoginForm } />
                     </Router>
                     </div>
-                    
+                    {/* <NavLink name="Go to Maps page" link="/mapview"><span>Karthick</span></NavLink> */}
                     <div className="seperatorSection"></div>
                     <section id="industry-section">
                         <div className="container">
                             <div className="head-part">
                                 <h5>Explore</h5>
-                                <h3>Advanced Features</h3>
+                                <NavLink name="Go to Maps page" link="/mapview"><h3>Advanced Features</h3></NavLink>
                             </div>
                             <div className="row">
                                 <div className="col">
