@@ -10,11 +10,8 @@ const Loginpage = AsyncComponent(() =>
 )
 
 const GoogleMap = AsyncComponent(() =>
-    import('./Components/GoogleMap').then(module => module.default)
-)
-const maps = AsyncComponent(() =>
-    import('./Components/GoogleMap').then(module => module.default)
-)
+     import('./Components/GoogleMap').then(module => module.default)
+ )
 
 const history = createHistory();
 
@@ -28,7 +25,6 @@ class App extends React.Component {
           <Route path="/" exact strict component={ Loginpage } />
           <Route path="/login" exact component={ Loginpage } />
           <Route path="/mapview" exact component={ GoogleMap } />
-          <Route path="/maps" exact component={ maps } />
           
         </Switch>
       </div>

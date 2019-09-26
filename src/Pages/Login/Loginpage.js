@@ -2,11 +2,13 @@ import React from 'react';
 //import Header1 from './Components/';
 //import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import LoginSection, { LoginForm } from '../Login/LoginSection';
 import { BrowserRouter as Router, Route} from "react-router-dom";
+import LoginSection, { LoginForm } from '../Login/LoginSection';
+import GoogleMap from '../../Components/GoogleMap';
 import NavLink from '../../Components/Link/Link'
 
 import './Loginpage.scss';
+
 /*
 const none = {
     display:'none'
@@ -26,6 +28,7 @@ class Loginpage extends React.Component {
                     <Router>
                         <Route exact path="/" component={ LoginSection }/>
                         <Route path="/login" component={ LoginForm } />
+                        <Route path="/mapview" component={ GoogleMap } />
                     </Router>
                     </div>
                     {/* <NavLink name="Go to Maps page" link="/mapview"><span>Karthick</span></NavLink> */}

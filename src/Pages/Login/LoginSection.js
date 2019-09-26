@@ -53,7 +53,7 @@ function LoginForm() {
                     <p> <input type="password" name="password"  placeholder="Password" /> </p>
                     <p> <input type="text" name="captcha" placeholder="Captcha" /> </p>
                     <p className="ffum16"><input type="checkbox" /> Remember me <span className="pull-right acolor ffum16">Forgot Password?</span></p>
-                    <p className="text-right"> <NavLink name="Go to Maps page" link="/mapview" ><input type="submit" value="Login" className="loginBut"/></NavLink> </p>
+                    <p className="text-right"> <NavLink name="Go to Maps page" link="/mapview" ><input type="submit" value="Login" className="loginBut" /></NavLink> </p>
                     {/* <NavLink name="Go to Maps page" link="/maps" ><span>Karthick</span></NavLink> */}
             </form>
             <p className="text-center ffu14">By Logging in you agree to our <a href="#/" className="acolor">Terms &amp; Conditions</a></p>
