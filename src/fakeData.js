@@ -15,8 +15,8 @@ fetch('http://10.18.1.126:9090/hello?count=800', { headers : { 'Content-Type': '
 });
 
 console.log(dataVal);
-async function tj_customer_name(id) {
-    const response = await fetch('http://10.18.1.126:9090/hello?count=800', {});
+async function tj_customer_name() {
+    const response = await fetch('http://10.18.1.126:8123/hello?count=800', { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Access-Control-Allow-Origin': '*' });
     let json = await response.json();
     json = json.map((datas,i)=> {
         datas.lat = datas.LATITUDE;

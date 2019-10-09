@@ -12,7 +12,7 @@ import vehiclelogo from './truck.png';
 //import styled from 'styled-components';
 
 const MAP = {
-  defaultZoom: 4,
+  defaultZoom: 5,
   defaultCenter: susolvkaCoords,
   options: {
     styles: mapStyles,

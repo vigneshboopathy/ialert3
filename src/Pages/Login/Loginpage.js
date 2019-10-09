@@ -2,10 +2,10 @@ import React from 'react';
 //import Header1 from './Components/';
 //import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import { BrowserRouter as Router, Route} from "react-router-dom";
-import LoginSection, { LoginForm } from '../Login/LoginSection';
-import GoogleMap from '../../Components/GoogleMap';
-import NavLink from '../../Components/Link/Link'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import LoginForm, { LoginSection } from '../Login/LoginSection';
+//import GoogleMap from '../../Components/GoogleMap';
+import NavLink from '../../Components/Link/Link';
 
 import './Loginpage.scss';
 
@@ -18,7 +18,24 @@ class Loginpage extends React.Component {
     constructor(props) {
         super(props);
         console.log(this.props);
+        this.state = {
+            page: ""
+        };
+        this.updatePage = this.updatePage.bind(this);
     }
+
+    updatePage(navPage) {
+        this.setState({page : navPage})
+    }
+
+    componentDidUpdate(prevState, newState) {
+        if(this.state.page!=='') {
+            //return <Redirect to='/mapview'  />;
+            this.props.history.push('/'+this.state.page);
+        }
+        return false;
+    }
+
 
     render() {
         return (
@@ -27,8 +44,8 @@ class Loginpage extends React.Component {
                     <div className="loginSection">
                     <Router>
                         <Route exact path="/" component={ LoginSection }/>
-                        <Route path="/login" component={ LoginForm } />
-                        <Route path="/mapview" component={ GoogleMap } />
+                        <Route path="/login" component={()=> <LoginForm redirectPage={this.updatePage} /> } />
+                        {/* <Route path="/mapview" component={ GoogleMap } /> */}
                     </Router>
                     </div>
                     {/* <NavLink name="Go to Maps page" link="/mapview"><span>Karthick</span></NavLink> */}

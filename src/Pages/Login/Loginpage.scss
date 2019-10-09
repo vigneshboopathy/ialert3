@@ -127,7 +127,11 @@ body {
         border-radius: 25px;
         padding: 0 30px;
         font-size: 20px;
-        }
+        outline: none; 
+            &:focus {
+                box-shadow: 0px 0px 10px #2287c9;
+            }
+        }   
         input::placeholder {
             color: rgba(35, 31, 32, 0.349);
             font-size: 20px;
