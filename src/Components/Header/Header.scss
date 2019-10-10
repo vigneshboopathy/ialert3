@@ -1,0 +1,65 @@
+
+#header-section .logoScreen {
+    .logo {
+        margin-top: 40px;
+        padding-top: 8px;
+        margin-left: 8px;
+    }
+}
+
+ul.menuList.loginFalse {
+    li {
+        a {
+        }
+    }
+
+    
+}
+
+ul.menuList{
+    margin-top: 30px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-left: 0px;
+
+    li {
+        list-style: none;
+        display: inline;
+        padding: 30px;
+        padding-left: 29px;
+        font-size: 17px;
+        margin-top: 15px;
+        font-family: Ubuntu;
+        font-weight: 600;
+        color: #74787b;
+        letter-spacing: 0.7px;
+    }
+
+    li:first-child {
+        color: #517bcd;
+        /* text-decoration: underline; */
+    }
+    li:first-child a{
+        position: relative;
+    }
+    li:first-child a.active:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        bottom: -11px;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 5px solid #427be6;
+        clear: both;
+    }
+}
+
+.loginIconImage {
+    margin: 0 6px;
+    margin-bottom: 30px;
+    text-align: right;
+    img {
+        cursor: pointer;
+    }
+}
