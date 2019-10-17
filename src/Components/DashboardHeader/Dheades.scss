@@ -1,0 +1,40 @@
+    .logo {
+        margin-top: 17px;
+    }
+   
+.ham {
+    margin-top: 23px;
+    margin-left: 41px;
+     }
+
+.usertexts {
+    margin-top: 25px;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: bold;
+    .customername{
+        color: #004ce5;
+    }
+}
+
+.hamtext {
+    margin-top: 24px;
+    margin-left: 504px;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: bold;
+}
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/Dashboardimgs/Banner.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .bannerspace{
+    margin-top: -9px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+  }
+  

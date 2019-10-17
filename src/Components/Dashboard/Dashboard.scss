@@ -1,0 +1,304 @@
+.bannerbg{
+    background: url(/images/Dashboadimgs/Banner.png) no-repeat top left;
+    height: 248px;
+    background-color: #4279e0;
+}
+.gif-total{
+    margin-top: 40px;
+    margin-left: -52px;
+}
+.gif-running{
+    margin-top: 40px;
+    margin-left: -52px;
+    display: none;
+}
+.gif-idling{
+    margin-top: 40px;
+    margin-left: -52px;
+    display: none;
+}
+.gif-stopped{
+    margin-top: 40px;
+    margin-left: -52px;
+    display: none;
+}
+.hower-run:hover ~ .hower-stp {  background-color: #f9b937; }
+.status-view{
+     font-family: 'Ubuntu';
+    font-size: 14px;
+    font-weight: bold;
+    color: #0d459a;
+}    
+
+.fleet-stat{
+    font-family: 'Ubuntu';
+    font-size: 21px;
+    font-weight: bold;
+    color: #0d459a;
+   
+}
+.fleetbox {
+    padding-top: 20px;   
+}
+.fleetstatusbox {
+    margin-top: -9px;
+    padding-left: 0px;
+}
+
+.right-text {
+    margin-top: 28px;
+    margin-left: -42px;
+}
+.right-space-text{
+    margin-top: -9px;
+}
+
+.right-text-fst {
+    margin-left: -14px;
+}
+.right-below-txt-clr {
+font-family: 'Ubuntu';
+font-size: 15px;
+color: #ffffff;
+}
+
+.right-below-txt{
+    margin-left: -15px;
+    margin-top: 10px;
+}
+
+
+.allgroup{
+        font-family: 'Ubuntu';
+        font-size: 13px;   
+        font-weight: bold;
+        padding: 6px 38px 7px 14px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #3F51B5;
+        background: #558bf4;
+        border: 0px;
+        cursor: pointer;
+        color: #0d459a;
+ }
+.allgroup-btn{
+    margin-top: 18px;
+}
+.count-value {
+    font-family: 'Ubuntu';
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+}    
+.count-text{
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.count-txt-des{
+     margin-top: -10px;
+     margin-left: 3px;
+}
+.count-val-des{
+    margin-right: 18px;
+}
+
+.entire-count{
+    margin-top: -10px;
+}
+
+.map-btn{
+    font-family: 'Ubuntu';
+        font-size: 13px;
+        font-weight: bold;
+        padding: 8px 56px 7px 16px;
+        border-radius: 25px;
+        box-shadow: none;
+        background: #f9b937;
+        border: 0px;
+        cursor: pointer;
+		
+    }
+.open-maps{
+    margin-left: 63px;
+    margin-top: 36px;
+    background-image: url(/images/Dashboadimgs/Location.png);
+	background-repeat: no-repeat;
+    background-position: 106px 10px;
+}    
+.list-view{
+    margin-left: 20px;
+    background-image: url(/images/Dashboadimgs/List.png);
+	background-repeat: no-repeat;
+    background-position: 94px 12px; 
+}
+.guick-link-quick{
+    box-shadow: 0px 0px 10px #8a8686;
+    background-color: #ffffff;
+    height: 90px;
+    border-radius: 10px;
+    margin-top: -26px;
+    width: 100%;
+}
+.bg-colors-quick{
+    background-color: #eceff1;
+   
+    
+}
+
+.guick-link-alert-right{
+    box-shadow: 0px 0px 10px #8a8686;
+    background-color: #ffffff;
+    height: 218px;
+    margin-left: -26px;
+    border-radius: 10px;
+    margin-top: 22px;
+    width: 329px;
+}
+
+.guick-link-alert-left{
+    box-shadow: 0px 0px 10px #8a8686;
+    background-color: #ffffff;
+    height: 218px;
+    margin-left: -17px;
+    border-radius: 10px;
+    margin-top: 22px;
+    width: 100%;
+}
+.bg-colors-alert{
+    height: 262px;
+    background-color: #eceff1;
+   
+    
+}
+.qik-lik{
+    margin-top: 28px;
+    margin-left: 16px;
+}
+.quck-text{
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    font-weight: bold;
+}
+.quck-img{
+    width: 90px;
+    margin-top: 17px;
+    margin-left: 25px;
+}
+
+.quck-img-list{
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.vert-line{
+    border-left: 1px solid #adb3ad;
+}
+.quck-img-sht{
+    background-color: #ece7e7;
+    width: 90px;
+     
+}
+
+.quck-img-org{
+    border-top-right-radius: 7px 10px;
+    border-bottom-right-radius: 7px 10px;
+    background-color: #ece7e7;
+    width: 90px;
+}
+.subval{
+    margin-right: 167px;
+}
+
+.quck-text-sht{  
+    margin: 3px 0px 0px 17px;
+    
+}
+.quck-text-org{  
+    margin: 3px 0px 0px 13px;
+ 
+}
+.quck-img-list-sht{
+    margin: 30px 0px 0px 35px;
+    color: #868b8d;
+}
+.quck-img-list-org{
+    margin: 21px 0px 0px 27px;
+    color: #868b8d;
+}
+//For alert box design
+.alert-span-view{
+    font-family: 'Ubuntu';
+   font-size: 14px;
+   font-weight: bold;
+   color: #868b8d;
+}
+.alert-box-info{
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: bold;
+    color: #263238;
+    margin-left: 14px;
+    margin-top: 12px;
+    width: 80%;
+} 
+.open-alert{
+    margin-left: 23px;
+    margin-top: 25px;
+    background-image: url(/images/Dashboadimgs/alerts.png);
+	background-repeat: no-repeat;
+    background-position: 117px 10px;
+}
+.alert-icon {
+    margin-left: 341px;
+    margin-top: -109px;
+}
+
+.weekly-btn{
+    font-family: 'Ubuntu';
+    font-size: 13px;   
+    font-weight: bold;
+    padding: 6px 38px 7px 14px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #989393;
+    background: #ece7e7;
+    border: 0px;
+    cursor: pointer;
+    color: #263238;
+}
+
+.alert-text-icon{
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: bold;
+    color: #263238; 
+    margin: 71px 0px 0px -83px;
+}
+.quck-img-alert{
+    margin-left: 15px;
+}
+.lastweek-btn{
+    margin-left: -40px;
+    margin-top: 18px;
+}
+.quck-img-bg{
+    margin: -55px 0px 0px 66px;
+}
+.alert-cnt-txt{  font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 77px;
+    margin-top: -54px;
+}
+.get-sup{
+    margin-top: 31px;
+    margin-left: 18px;
+}
+.open-mail-icon{
+    margin-left: -9px;
+    margin-top: 163px;
+    background-image: url(/images/Dashboadimgs/message.png);
+	background-repeat: no-repeat;
+    background-position: 78px;
+}

@@ -303,9 +303,14 @@ export default class LoginForm extends React.Component {
                     <p> <input type="password" name="password" value={ this.state.userInfo.password } placeholder="Password" onChange={this.handleuserVals} required /> </p>
                     <p> <input type="text" name="captcha" value={ this.state.userInfo.captcha } placeholder="Captcha" required onChange={this.handleuserVals} /> </p>
                     <p className="ffum16"><input type="checkbox" /> Remember me <span className="pull-right acolor ffum16">Forgot Password?</span></p>
-                    {/* <p className="text-right"> <input type="button" disabled={ this.state.userInfo.loginDisable } value="Login" className="loginBut" onClick={ this.props.redirectPage.bind(this, 'mapview') } /> </p> */}
-                    <p className="text-right"> <input type="button" disabled={ this.state.userInfo.loginDisable } value="Login" className="loginBut" onClick={ this.loginFunction } /> </p>
+
+                    <p className="text-right"> <input type="button" disabled={ this.state.userInfo.loginDisable } value="Login" className="loginBut" onClick={ this.props.redirectPage.bind(this, 'dashboard') } /> </p>
+                    {/* <NavLink name="Go to Maps page" link="/maps" ><span>Karthick</span></NavLink> */}
+
+                    {/* <p className="text-right"> <input type="button" disabled={ this.state.userInfo.loginDisable } value="Login" className="loginBut" onClick={ this.props.redirectPage.bind(this, 'mapview') } /> </p> 
+                    <p className="text-right"> <input type="button" disabled={ this.state.userInfo.loginDisable } value="Login" className="loginBut" onClick={ this.loginFunction } /> </p> */}
                     
+
             </form>
             <p className="text-center ffu14">By Logging in you agree to our <a href="#/" className="acolor">Terms &amp; Conditions</a></p>
                 </div>
