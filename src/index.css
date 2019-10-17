@@ -176,3 +176,13 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #ccc; 
 }
+
+
+input[type="button"] {
+  cursor: pointer;
+}
+
+.submitButton {
+  background: #f9b836;
+  border-radius: 20px;
+}

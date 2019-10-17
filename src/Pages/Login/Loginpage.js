@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import LoginForm, { LoginSection } from '../Login/LoginSection';
 //import GoogleMap from '../../Components/GoogleMap';
 import NavLink from '../../Components/Link/Link';
+import { BacktoTop } from '../../Components/BacktoTop/BacktoTop';
 
 import './Loginpage.scss';
 
@@ -49,7 +50,7 @@ class Loginpage extends React.Component {
                     </Router>
                     </div>
                     {/* <NavLink name="Go to Maps page" link="/mapview"><span>Karthick</span></NavLink> */}
-                    <div className="seperatorSection"></div>
+                    <div className="seperatorSection" id="features"></div>
                     <section id="industry-section">
                         <div className="container">
                             <div className="head-part">
@@ -127,7 +128,7 @@ class Loginpage extends React.Component {
                         </div>
                     </section>
 
-                    <div className="seperatorSection"></div>
+                    <div className="seperatorSection" id="contact"></div>
                     <section id="contact-section">
                         <div className="container">
                             <div className="row">
@@ -167,7 +168,7 @@ class Loginpage extends React.Component {
                 </div>
                 <div className="seperatorSection"></div>
                 <Footer />
-                
+                <BacktoTop />
             </div>
             
         )

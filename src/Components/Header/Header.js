@@ -10,7 +10,7 @@ function HeaderTrue(menuList) {
             <nav className="menuItems">
                 <ul className="menuList">
                     { menuList.val.map((listVal, index)=> (
-                        <li key={index}><a href="#/" className="active">{listVal}</a></li>
+                        <li key={index}><a href={listVal.link} className="active">{listVal.value}</a></li>
                     ))}
                 </ul>
             </nav>
@@ -49,7 +49,11 @@ class Header extends React.Component {
         super(props);
         //console.log(this.props);
         this.state = {
-            navList: ["Home", "Features", "Contact"]
+            navList: [
+                {   value:"Home", link: '#home' }, 
+                {   value: "Features", link: '#features' }, 
+                {   value: "Contact", link: '#contact' }
+            ]
         }
         console.log(this.props.login);
     }
