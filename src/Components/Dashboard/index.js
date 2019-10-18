@@ -8,21 +8,17 @@ import NavLink from '../../Components/Link/Link';
 class dashboard extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {isHovered: false};
-        this.updatePage = this.updatePage.bind(this);
+
+        this.handleHover = this.handleHover.bind(this);
+        this.gif_path = "";
+        this.gifImage = React.createRef();
+        this.gifname = "Total"
     }
-        updatePage(navPage) {
-            this.setState({page : navPage})
-        }
-    
-        componentDidUpdate(prevState, newState) {
-            if(this.state.page!=='') {
-                //return <Redirect to='/mapview'  />;
-                this.props.history.push('/'+this.state.page);
-            }
-            return false;
-        }
-  
+     
+    handleHover(e){
+        let status = e.currentTarget.dataset.status
+        this.gifImage.current.src = "/images/Dashboadimgs/GIF-"+status+".gif";
+    }
     
     render(){
         return(<div className="login">
@@ -34,18 +30,9 @@ class dashboard extends React.Component{
         <div className="col-md-2 fleet-stat fleetbox">
          Fleet  <div className="col-md-12 fleet-stat fleetstatusbox">Status . <span className="status-view">Overview </span></div>      
         </div>
-        <div className="col-md-5 gif-total">
-        <img src="images/Dashboadimgs/GIF-Total.gif" alt="vehicles" title="Total"/ >        
-        </div>
-        <div className="col-md-5 gif-running">     
-        <img src="images/Dashboadimgs/GIF-Running.gif" alt="vehicles" title="running"/ >        
-        </div>
-        <div className="col-md-5 gif-idling">        
-        <img src="images/Dashboadimgs/GIF-Idling.gif" alt="vehicles" title="Idling"/ >        
-        </div>
-        <div className="col-md-5 gif-stopped">
-         <img src="images/Dashboadimgs/GIF-Stopped.gif" alt="vehicles" title="Stopped"/ >
-        </div>
+        <div className='col-md-5 gif-dashboard'>
+         <img ref={this.gifImage} src={"images/Dashboadimgs/GIF-"+this.gifname+".gif"} alt="vehicles" title="Total"/ >        
+                </div>
         <div className="col-md-4 right-text">
         <div className="fleet-stat col-md-8 right-text-fst">Keep track of </div>
         <div className="fleet-stat right-space-text">your trucks 24/7 </div> 
@@ -53,12 +40,12 @@ class dashboard extends React.Component{
         </div>
         <div className="col-md-2 allgroup-btn">
         <input type="button" className="allgroup" value="All Groups" />
-        </div>
-        <div className="row entire-count">
-        <div className="col-md-3 hower-tol"><div className = "count-value count-val-des">256</div><div className="count-text count-txt-des">Total</div> </div>
-        <div className="col-md-3 hower-run"><div className = "count-value count-val-des">64</div><div className="count-text count-txt-des">Running</div></div>
-        <div className="col-md-3 hower-idl"><div className = "count-value count-val-des">22</div><div className="count-text count-txt-des">Idling</div></div>
-        <div className="col-md-3 hower-stp"><div className = "count-value count-val-des">156</div><div className="count-text count-txt-des">Stopped</div></div>
+        </div>        
+        <div className="row entire-count">        
+        <div className="col-md-3 hower-tol" data-status="Total" onMouseEnter={this.handleHover}><div className = "count-value count-val-des">256</div><div className="count-text count-txt-des">Total</div> </div>
+        <div className="col-md-3 hower-run" data-status="Running" onMouseEnter={this.handleHover}><div className = "count-value count-val-des">64</div><div className="count-text count-txt-des">Running</div></div>
+        <div className="col-md-3 hower-idl" data-status="Idling" onMouseEnter={this.handleHover} ><div className = "count-value count-val-des">22</div><div className="count-text count-txt-des">Idling</div></div>
+        <div className="col-md-3 hower-stp" data-status="Stopped" onMouseEnter={this.handleHover}><div className = "count-value count-val-des">156</div><div className="count-text count-txt-des">Stopped</div></div>
         </div>
         <div className="col-md-5">
         <NavLink name="Go to Maps page" link="/mapview"><input type="button" className="map-btn open-maps"  value="Open Maps" /></NavLink>        

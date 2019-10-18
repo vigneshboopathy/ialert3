@@ -3,26 +3,31 @@
     height: 248px;
     background-color: #4279e0;
 }
-.gif-total{
+.gif-dashboard{
     margin-top: 40px;
     margin-left: -52px;
 }
-.gif-running{
-    margin-top: 40px;
-    margin-left: -52px;
+
+.gif-block{
+    display: block;
+}
+.gif-none{
     display: none;
 }
-.gif-idling{
-    margin-top: 40px;
-    margin-left: -52px;
-    display: none;
+//GIF modification
+$width:auto;
+@mixin clearfix($width) {
+
+   @if $width == 'auto' {
+
+    // if width is not passed, or empty do this
+
+   } @else {
+        display: inline-block;
+        width: $width;
+   }
 }
-.gif-stopped{
-    margin-top: 40px;
-    margin-left: -52px;
-    display: none;
-}
-.hower-run:hover ~ .hower-stp {  background-color: #f9b937; }
+
 .status-view{
      font-family: 'Ubuntu';
     font-size: 14px;
@@ -302,3 +307,4 @@ color: #ffffff;
 	background-repeat: no-repeat;
     background-position: 78px;
 }
+
