@@ -8,7 +8,7 @@
     "font-awesome": "^4.7.0",
     "google-map-react": "1.0.1",
     "immutable": "^3.8.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "points-cluster": "0.1.4",
     "prop-types": "15.5.10",
     "react": "^16.9.0",
